@@ -2,3 +2,24 @@ pwd
 cd C:\
 git clone https://github.com/SpaceEmir/Asteroiden-Ausweichen.git
 cd Asteroiden-Ausweichen
+
+
+Mache folgendes im bullet_class.py:
+zeile 3 -> init()
+zeile 185 -> size = FULLSCREEN
+nach Zeile 261 -> if e.type == KEYDOWN and e.key == K_ESCAPE: running = False
+zeile 196 -> num_asteroids = 20 oder so viel wie man will
+zeile 156 ->         bullet = Bullet(bullet_photo, 0, 0, 0, 0, x=3, y=3)
+zeile 65 weg machen
+Im Player.controls() das hier hinzufügen:
+        if self.rect.y >= size[1] - self.width // 2:
+            self.start(do=(self.rect.x, 0))
+        
+        if self.rect.y <= self.width // 2:
+            self.start(do=(self.rect.x, self.rect.y))
+
+        if self.rect.x >= size[0] - self.height // 2:
+            self.start(do=(0, self.rect.y))
+        
+        if self.rect.x <= self.height // 2:
+            self.start(do=(self.rect.x, self.rect.y))
