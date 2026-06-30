@@ -1,0 +1,4 @@
+pwd
+cd C:\
+git clone https://github.com/SpaceEmir/Asteroiden-Ausweichen.git
+cd Asteroiden-Ausweichen
