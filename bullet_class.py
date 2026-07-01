@@ -187,7 +187,7 @@ size = (600, 400)
 # Photo settings
 
 player_photo = "rocket.png"
-asteroid_photo = "asteroid.png"
+asteroid_photo = "asteroid.jpeg"
 background_photo = "background.png"
 bullet_photo = "bullet.png"
 
@@ -219,7 +219,7 @@ wait_time = 3 # s
 
 mixer.init()
 
-mixer.music.load("space.mp3")
+mixer.music.load("space.mpeg")
 mixer.music.play()
 
 # HILFSFUNKTIONEN
@@ -357,5 +357,3 @@ background = transform.scale(
 
 while game:
     main()
-
-# TODO 
